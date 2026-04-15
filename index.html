@@ -19,6 +19,120 @@
     --border: #2a2a2a;
     --white: #ffffff;
   }
+  /* ===== FINAL RESPONSIVE + FIXES ===== */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CTA FIX */
+.link-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:10px 16px;
+  background:rgba(141,198,63,0.1);
+  border:1px solid rgba(141,198,63,0.3);
+  border-radius:6px;
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  transition:0.2s;
+}
+
+.link-btn:hover {
+  background:#8DC63F;
+  color:#000;
+}
+
+/* BULLETS FIX */
+.cs-block ul {
+  list-style:none;
+  padding:0;
+}
+
+.cs-block li {
+  position:relative;
+  padding-left:16px;
+  margin-bottom:8px;
+}
+
+.cs-block li::before {
+  content:"";
+  width:6px;
+  height:6px;
+  background:#8DC63F;
+  border-radius:50%;
+  position:absolute;
+  left:0;
+  top:8px;
+}
+
+/* MOBILE NAV */
+.menu-toggle {
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.menu-toggle span {
+  width:22px;
+  height:2px;
+  background:#fff;
+  transition:0.3s;
+}
+
+.mobile-menu {
+  position:fixed;
+  top:60px;
+  left:0;
+  right:0;
+  background:#111;
+  border-top:1px solid #2a2a2a;
+  display:none;
+  flex-direction:column;
+  padding:20px;
+  gap:16px;
+  transform:translateY(-10px);
+  opacity:0;
+  transition:0.3s ease;
+}
+
+.mobile-menu.active {
+  display:flex;
+  transform:translateY(0);
+  opacity:1;
+}
+
+.mobile-menu a {
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+
+  .nav-links {
+    display:none;
+  }
+
+  .menu-toggle {
+    display:flex;
+  }
+
+  .hero, section {
+    padding:80px 16px;
+  }
+
+}
   body {
   color: var(--text);
 }
@@ -414,6 +528,166 @@ footer p {
   .hero-desc { font-size: 15px; }
   .platform-strip { justify-content: center; }
 }
+  /* ================= FULL RESPONSIVE FIX ================= */
+
+/* GLOBAL SAFETY */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+
+  .hero {
+    padding: 110px 40px 70px;
+  }
+
+  section {
+    padding: 80px 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 14px 16px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 90px 16px 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* BUTTONS */
+  .hero-ctas {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* STATS */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .hero-stat-num {
+    font-size: 22px;
+  }
+
+  /* PLATFORM STRIP */
+  .platform-strip {
+    justify-content: center;
+  }
+
+  .platform-chip {
+    flex: 1 1 calc(50% - 10px);
+    justify-content: center;
+  }
+
+  /* CASE STUDY GRID */
+  .cs-grid,
+  .cs-grid-3,
+  .screenshots.two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* TOOLS */
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  /* CONTACT */
+  .contact-card {
+    padding: 24px 18px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 80px 14px 50px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  /* STACK EVERYTHING */
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-chip {
+    flex: 1 1 100%;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -427,6 +701,11 @@ footer p {
     <a href="#tools">Tools</a>
     <a href="#contact">Contact</a>
   </div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 </nav>
 
 <!-- HERO -->
@@ -470,10 +749,12 @@ footer p {
         <img src="https://cdn.simpleicons.org/googleads/ffffff">
         Google Ads
       </div>
-      <div class="platform-chip">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="LinkedIn logo">
-        <span>LinkedIn Ads</span>
-      </div>
+     <div class="platform-chip">
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="white">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.036-1.852-3.036-1.853 0-2.136 1.445-2.136 2.939v5.666H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.37-1.852 3.603 0 4.268 2.37 4.268 5.455v6.288z"/>
+  </svg>
+  LinkedIn Ads
+</div>
       <div class="platform-chip">
         <img src="https://cdn.simpleicons.org/tiktok/ffffff">
         TikTok Ads
@@ -1169,6 +1450,12 @@ footer p {
   <p>© 2026 <span>Muhammad Saqib</span> — Performance Marketing Specialist</p>
   <p>Built to convert. Designed to impress.</p>
 </footer>
+  <script>
+function toggleMenu(){
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('active');
+}
+</script>
 
 </body>
 </html>
