@@ -7,22 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
  :root {
-  /* Backgrounds */
-  --bg: #0F0F0F;
-  --surface: #171717;
-  --surface-2: #202020;
-
-  /* Text */
-  --text: #F5F5F5;
-  --text-muted: #A3A3A3;
-  --text-dim: #737373;
-
-  /* Borders */
-  --border: #2A2A2A;
-
-  /* Primary */
-  --primary: #FFFFFF;
-  --primary-hover: #EAEAEA;
+  --bg:#FFFFFF;
+  --surface:#FAFAFA;
+  --surface-2:#F4F4F4;
+  --text:#111111;
+  --text-muted:#555555;
+  --text-dim:#777777;
+  --border:#E5E5E5;
+  --primary:#111111;
+  --primary-hover:#333333;
+  --white:#111111;
 }
   /* ===== FINAL RESPONSIVE + FIXES ===== */
 html, body {
@@ -45,7 +39,7 @@ img {
   padding: 10px 16px;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: rgba(141,198,63,0.08);
+  background: rgba(255,255,255,0.05);
   color: var(--white) !important;
   font-size: 13px;
   font-weight: 700;
@@ -55,7 +49,7 @@ img {
 }
 
 .link-btn:hover {
-  background: rgba(141,198,63,0.16);
+  background: rgba(255,255,255,0.10);
   border-color: var(--primary);
   color: var(--white) !important;
   transform: translateY(-1px);
@@ -88,7 +82,7 @@ img {
   content:"";
   width:6px;
   height:6px;
-  background:#8DC63F;
+  background:#FFFFFF;
   border-radius:50%;
   position:absolute;
   left:0;
@@ -228,7 +222,8 @@ footer p {
   /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(13,13,13,0.92);
+    background: rgba(255,255,255,0.95);
+box-shadow:0 1px 12px rgba(0,0,0,.05);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     padding: 0 40px;
@@ -253,7 +248,7 @@ footer p {
     content: '';
     position: absolute; top: -200px; left: -200px;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(141,198,63,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-tag {
@@ -300,13 +295,13 @@ footer p {
   .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn-primary {
     display: inline-flex; align-items: center; gap: 8px;
-    background: var(--primary); color: #0d0d0d;
+    background: var(--primary); color: #FFFFFF;
     font-size: 14px; font-weight: 700;
     padding: 14px 28px; border-radius: 6px;
     text-decoration: none; transition: all 0.2s;
     border: none; cursor: pointer;
   }
-  .btn-primary:hover { background: #a0d94a; transform: translateY(-1px); }
+  .btn-primary:hover { background: #EAEAEA; transform: translateY(-1px); }
   .btn-outline {
     display: inline-flex; align-items: center; gap: 8px;
     background: transparent; color: var(--text);
@@ -439,14 +434,14 @@ footer p {
   .screenshot-wrap {
     border-radius: 8px; overflow: hidden;
     border: 1px solid var(--border);
-    background: #111;
+    background: #FAFAFA;
   }
   .screenshot-wrap img { width: 100%; display: block; }
   .screenshot-label {
     font-size: 11px; font-weight: 600; color: var(--text-dim);
     padding: 8px 12px;
     text-transform: uppercase; letter-spacing: 0.8px;
-    background: #0f0f0f;
+    background: #FFFFFF;
     border-top: 1px solid var(--border);
   }
 
@@ -464,7 +459,7 @@ footer p {
   .link-btn svg { flex-shrink: 0; }
 
   /* TOOLS */
-  .tools-section { background: #111; }
+  .tools-section { background: #FAFAFA; }
   .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
   .tool-card {
     background: var(--surface);
@@ -531,7 +526,7 @@ footer p {
 
   /* FOOTER */
   footer {
-    background: #0a0a0a;
+    background: #FFFFFF;
     border-top: 1px solid var(--border);
     padding: 32px 80px;
     display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
@@ -615,7 +610,7 @@ footer p {
     nav { display: none; }
     .hero, section { padding: 60px 48px; }
     .case-study { page-break-inside: avoid; }
-    body { background: #0d0d0d; }
+    body { background: #FFFFFF; }
   }
 
   @media (max-width: 768px) {
