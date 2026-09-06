@@ -2129,6 +2129,76 @@ button:focus-visible {
   .hero-inner{padding-left:16px;padding-right:16px;}
 }
 </style>
+
+<style>
+/* ===== CASE STUDY ENTRY / HEADING PROMINENCE ===== */
+/* Make the beginning of every case study immediately recognizable without changing content. */
+.case-study > .cs-header{
+  position:relative;
+  padding:38px 40px 34px !important;
+  background:linear-gradient(180deg,#F7FAFF 0%,#FFFFFF 100%) !important;
+  border-bottom:1.5px solid rgba(22,41,79,.24) !important;
+  gap:24px !important;
+}
+.case-study > .cs-header .cs-header-left{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.case-study > .cs-header .cs-number{
+  display:inline-flex;
+  align-items:center;
+  width:fit-content;
+  min-height:30px;
+  margin:0 0 14px !important;
+  padding:6px 10px;
+  border:1px solid rgba(37,99,235,.22);
+  border-radius:999px;
+  background:#EFF4FF;
+  color:#16294F !important;
+  font-size:12px !important;
+  font-weight:700 !important;
+  line-height:1.2;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+}
+.case-study > .cs-header .cs-title{
+  margin:0 0 10px !important;
+  max-width:900px;
+  color:#102447 !important;
+  font-size:clamp(31px,3vw,38px) !important;
+  font-weight:700 !important;
+  line-height:1.16 !important;
+  letter-spacing:-.01em !important;
+}
+.case-study > .cs-header .cs-subtitle{
+  max-width:850px;
+  margin:0 !important;
+  color:#4B5B72 !important;
+  font-size:16.5px !important;
+  line-height:1.55 !important;
+  font-weight:400 !important;
+}
+.case-study > .cs-header .cs-badges{
+  padding-top:2px;
+}
+
+@media (max-width:1024px){
+  .case-study > .cs-header{padding:32px 30px 28px !important;}
+  .case-study > .cs-header .cs-title{font-size:32px !important;}
+}
+@media (max-width:768px){
+  .case-study > .cs-header{padding:27px 22px 24px !important;}
+  .case-study > .cs-header .cs-number{margin-bottom:12px !important;}
+  .case-study > .cs-header .cs-title{font-size:28px !important;line-height:1.18 !important;}
+  .case-study > .cs-header .cs-subtitle{font-size:15.5px !important;}
+}
+@media (max-width:480px){
+  .case-study > .cs-header{padding:24px 18px 22px !important;}
+  .case-study > .cs-header .cs-title{font-size:26px !important;}
+  .case-study > .cs-header .cs-subtitle{font-size:15px !important;}
+}
+</style>
 </head>
 <body>
 <!-- NAV -->
